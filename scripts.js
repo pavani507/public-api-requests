@@ -9,7 +9,8 @@ const input1 = $(`<input>`);
 $(input1).attr("type", "search");
 $(input1).attr("id", "search-input");
 $(input1).attr("class", "search-input");
-$(input1).attr("placeholder", "Search...");
+
+$(input1).attr("placeholder", "search...");
 
 const input2 = $(`<input>`);
 $(input2).attr("type", "submit");
@@ -67,7 +68,7 @@ function employeeInfo(data) {
     gallery.append(div);
     div.append(cardInnerDiv);
     cardInnerDiv.append(img);
-    cardInnerDiv.append(cardInfoDiv);
+    div.append(cardInfoDiv);
     cardInfoDiv.append(nameHeading);
     cardInfoDiv.append(email);
     cardInfoDiv.append(city_state);
@@ -93,13 +94,14 @@ function modelMockup(data) {
   });
 }
 
-// Modal pops up when a user is clicked.
+// Modal pops up when a user is clicked the card.
 function popupMenu(data) {
   const div = $(`<div></div>`);
   div.addClass("modal-container");
 
   const modalInnerDiv = $(`<div></div>`);
   modalInnerDiv.addClass("modal");
+  // add backgroundcolor for modal window
   modalInnerDiv.css({ backgroundColor: "#33FFD4" });
   const button = $("<button></button>");
   const strong = $("<strong></strong>");
